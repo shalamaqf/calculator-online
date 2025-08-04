@@ -6,19 +6,19 @@ const operatorBtn = document.querySelectorAll(".operator-btn");
 const equalBtn = document.querySelector("#equal-btn");
 
 
-// Create a string variable to store the user input
-let input = "";
+// Create an array to store the user input
+let userInput = [];
 
 /*
  * Create a function to add event listeners to digit buttons
- * When a digit button clicked, it will stored in a string variable
- * Then, the string variable will be displayed in the result text
+ * When a digit button clicked, it will stored in an input array
+ * Then, the array will be displayed in the result text
 */
 function displayDigit() {
     digitBtn.forEach(digit => {
      digit.addEventListener('pointerdown', () => {
-            input += digit.textContent;
-            displayResult.textContent = input;
+            userInput.push(digit.textContent)
+            displayResult.textContent = userInput.join('');
         })
     })
 }
