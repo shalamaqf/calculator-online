@@ -48,7 +48,7 @@ body {
     max-width: 400px;
     min-height: 200px;
     justify-content: flex-start;
-    gap: 3px;
+    gap: 2px;
     background-color: black;
 }
 
@@ -61,6 +61,8 @@ body {
 .digit {
     flex-basis: 33.33%;
     font-size: 20px;
+    background-color: orange;
+    border: 1px solid black;
 }
 
 #right-buttons{
@@ -77,4 +79,10 @@ body {
 .operator-btn {
     flex-basis: 50%;
     font-size: 20px;
+}
+
+.feature-btn, .operator-btn {
+    background-color: goldenrod;
+    border: 1px solid black;
+    color: green;
 }
