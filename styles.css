@@ -66,4 +66,5 @@ body {
 #right-buttons{
     display: flex;
     flex-basis: 40%;
+    flex-wrap: wrap;
 }
