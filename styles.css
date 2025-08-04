@@ -54,6 +54,11 @@ body {
 #left-buttons {
     display: flex;
     flex-basis: 60%;
+    flex-wrap: wrap;
+}
+
+.digit {
+    flex-basis: 33.33%;
 }
 
 #right-buttons{
