@@ -86,3 +86,13 @@ body {
     border: 1px solid black;
     color: green;
 }
+
+#last-buttons {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    min-height: 70px;
+    justify-content: flex-start;
+    gap: 2px;
+    background-color: black;
+}
