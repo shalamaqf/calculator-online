@@ -16,8 +16,9 @@ let input = "";
 */
 function displayDigit() {
     digitBtn.forEach(digit => {
-    digit.addEventListener('pointerdown', () => {
-        input += digit.textContent;
-        displayResult.textContent = input;
+     digit.addEventListener('pointerdown', () => {
+            input += digit.textContent;
+            displayResult.textContent = input;
+        })
     })
-})
+}
