@@ -101,3 +101,10 @@ body {
     display: flex;
     flex-basis: 60%;
 }
+
+#digit-buttons .digit{
+    flex-basis: 49.75%;
+    font-size: 20px;
+    background-color: orange;
+    border: 1px solid black;
+}
