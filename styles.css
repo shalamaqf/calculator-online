@@ -41,3 +41,15 @@ body {
     padding-right: 10px;
     white-space: nowrap;
 }
+
+#mid-buttons {
+    display: flex;
+}
+
+#left-buttons {
+    display: flex;
+}
+
+#right-buttons{
+    display: flex;
+}
