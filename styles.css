@@ -96,3 +96,8 @@ body {
     gap: 2px;
     background-color: black;
 }
+
+#digit-buttons {
+    display: flex;
+    flex-basis: 60%;
+}
