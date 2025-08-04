@@ -60,6 +60,7 @@ body {
 
 .digit {
     flex-basis: 33.33%;
+    font-size: 20px;
 }
 
 #right-buttons{
