@@ -44,6 +44,11 @@ body {
 
 #mid-buttons {
     display: flex;
+    width: 100%;
+    max-width: 400px;
+    min-height: 180px;
+    justify-content: flex-start;
+    gap: 3px;
 }
 
 #left-buttons {
