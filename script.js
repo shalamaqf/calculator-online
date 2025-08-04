@@ -16,8 +16,22 @@ let userInput = [];
 */
 function displayDigit() {
     digitBtn.forEach(digit => {
-     digit.addEventListener('pointerdown', () => {
-            userInput.push(digit.textContent)
+        digit.addEventListener('pointerdown', () => {
+            userInput.push(digit.textContent);
+            displayResult.textContent = userInput.join('');
+        })
+    })
+}
+
+/*
+ * Create a function to add event listeners to operator buttons
+ * When an operator button clicked, it will stored in an input array
+ * Then, the array will be displayed in the result text
+*/
+function displayOperator() {
+    operatorBtn.forEach(operator => {
+        operator.addEventListener('pointerdown', () => {
+            userInput.push(operator.textContent);
             displayResult.textContent = userInput.join('');
         })
     })
