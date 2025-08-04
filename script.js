@@ -37,3 +37,15 @@ function displayOperator() {
         })
     })
 }
+
+
+/*
+ * Create a function to add event listeners to feature 'AC' button
+ * When it clicked, it will clear the array and display text
+*/
+function allClear() {
+    allClearBtn.addEventListener('pointerdown', () => {
+        userInput.length = 0;
+        displayResult.textContent = userInput.join('');
+    })
+}
