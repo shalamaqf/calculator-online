@@ -68,3 +68,13 @@ body {
     flex-basis: 40%;
     flex-wrap: wrap;
 }
+
+.feature-btn {
+    flex-basis: 50%;
+    font-size: 20px;
+}
+
+.operator-btn {
+    flex-basis: 50%;
+    font-size: 20px;
+}
