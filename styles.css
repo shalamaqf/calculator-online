@@ -49,6 +49,7 @@ body {
     min-height: 200px;
     justify-content: flex-start;
     gap: 3px;
+    background-color: black;
 }
 
 #left-buttons {
