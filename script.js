@@ -5,3 +5,6 @@ const featureBtn = document.querySelectorAll(".feature-btn");
 const operatorBtn = document.querySelectorAll(".operator-btn");
 const equalBtn = document.querySelector("#equal-btn");
 
+
+// Create a string variable to store the user input
+let input = "";
