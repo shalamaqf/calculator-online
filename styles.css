@@ -103,8 +103,15 @@ body {
 }
 
 #digit-buttons .digit{
-    flex-basis: 49.75%;
+    flex-basis: 50%;
     font-size: 20px;
     background-color: orange;
+    border: 1px solid black;
+}
+
+#equal-btn {
+    flex-basis: 40%;
+    font-size: 20px;
+    background-color: yellow;
     border: 1px solid black;
 }
