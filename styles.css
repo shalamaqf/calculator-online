@@ -53,8 +53,10 @@ body {
 
 #left-buttons {
     display: flex;
+    flex-basis: 60%;
 }
 
 #right-buttons{
     display: flex;
+    flex-basis: 40%;
 }
