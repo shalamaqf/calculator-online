@@ -60,3 +60,16 @@ function clearEntry() {
         displayResult.textContent = userInput.join('');
     })
 }
+
+
+// Create a function to check if the user input empty or not
+function isEmpty() {
+    if (userInput.length == 0){
+        allClearBtn.disabled = true;
+        deleteBtn.disabled = true;
+    }
+    else {
+        allClearBtn.disabled = false;
+        deleteBtn.disabled = false;
+    }
+}
