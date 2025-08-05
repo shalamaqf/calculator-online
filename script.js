@@ -49,3 +49,14 @@ function allClear() {
         displayResult.textContent = userInput.join('');
     })
 }
+
+/*
+ * Create a function to add event listeners to feature 'CE' button
+ * When it clicked, it will clear the last character in display text
+*/
+function clearEntry() {
+    deleteBtn.addEventListener('pointerdown', () => {
+        userInput.pop();
+        displayResult.textContent = userInput.join('');
+    })
+}
