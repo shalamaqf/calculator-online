@@ -80,3 +80,9 @@ function isEmpty() {
         deleteBtn.disabled = false;
     }
 }
+
+
+// Create three variables to store the value of two numbers and an operator
+let firstNumber = null;
+let secondNumber = null;
+let operator = null;
