@@ -88,8 +88,14 @@ let secondNumber = null;
 let operator = null;
 
 
-// Create a variable to store the last character in userInput
+// Create a variable to store the last character of userInput
 let lastInput = userInput[userInput.length - 1];
+
+
+// Create a function to check the character is digit or operator
+function checkLastInput(lastInput) {
+    return !isNaN(lastInput);
+}
 
 
 // Create a function to calculate two numbers by one operator
