@@ -20,6 +20,7 @@ function displayDigit() {
         digit.addEventListener('pointerdown', () => {
             userInput.push(digit.textContent);
             displayResult.textContent = userInput.join('');
+            isEmpty();
         })
     })
 }
@@ -34,6 +35,7 @@ function displayOperator() {
         operator.addEventListener('pointerdown', () => {
             userInput.push(operator.textContent);
             displayResult.textContent = userInput.join('');
+            isEmpty();
         })
     })
 }
@@ -47,6 +49,7 @@ function allClear() {
     allClearBtn.addEventListener('pointerdown', () => {
         userInput.length = 0;
         displayResult.textContent = userInput.join('');
+        isEmpty();
     })
 }
 
@@ -58,11 +61,15 @@ function clearEntry() {
     deleteBtn.addEventListener('pointerdown', () => {
         userInput.pop();
         displayResult.textContent = userInput.join('');
+        isEmpty();
     })
 }
 
 
-// Create a function to check if the user input empty or not
+/*
+ * Create a function to check if the user input empty or not
+ * Disabled or enabled buttons based on the condition
+*/
 function isEmpty() {
     if (userInput.length == 0){
         allClearBtn.disabled = true;
