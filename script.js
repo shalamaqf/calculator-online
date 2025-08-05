@@ -86,3 +86,18 @@ function isEmpty() {
 let firstNumber = null;
 let secondNumber = null;
 let operator = null;
+
+
+// Create a function to calculate two numbers by one operator
+function calculate(firstNum, secondNum, operator) {
+    switch (operator) {
+        case '+':
+            return Number(firstNum) + Number(secondNum);
+        case '-':
+            return Number(firstNum) - Number(secondNum);
+        case '*':
+            return Number(firstNum) * Number(secondNum);
+        case '/':
+            return Number(firstNum) /  Number(secondNum);
+    }
+}
