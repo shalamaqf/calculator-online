@@ -88,6 +88,10 @@ let secondNumber = null;
 let operator = null;
 
 
+// Create a variable to store the last character in userInput
+let lastInput = userInput[userInput.length - 1];
+
+
 // Create a function to calculate two numbers by one operator
 function calculate(firstNum, secondNum, operator) {
     switch (operator) {
