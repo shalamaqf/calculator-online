@@ -108,6 +108,9 @@ function operate(firstNum, secondNum, operator) {
         case '*':
             return Number(firstNum) * Number(secondNum);
         case '/':
+            if (secondNum == 0) {
+                return undefined;                 // if divided by 0
+            }
             return Number(firstNum) /  Number(secondNum);
     }
 }
