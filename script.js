@@ -83,9 +83,9 @@ function isEmpty() {
 
 
 // Create three variables to store the value of two numbers and an operator
-let firstNumber = null;
-let secondNumber = null;
-let operator = null;
+let firstNumber = '';
+let secondNumber = '';
+let operator = '';
 
 
 // Create a variable to store the last character of userInput
