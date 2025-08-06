@@ -65,6 +65,7 @@ function allClear() {
         userInput.length = 0;
         displayResult.textContent = userInput.join('');
         isEmpty();
+        updateOperatorBtnStatus();
     })
 }
 
@@ -77,6 +78,7 @@ function clearEntry() {
         userInput.pop();
         displayResult.textContent = userInput.join('');
         isEmpty();
+        updateOperatorBtnStatus();
     })
 }
 
@@ -117,6 +119,7 @@ function checkLastInput(lastInput) {
 function handleDigit(lastInput) {
     if (operator == '') {
         firstNumber += lastInput;
+        updateOperatorBtnStatus();
     }
     else {
         secondNumber += lastInput;
