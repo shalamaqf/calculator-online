@@ -127,6 +127,21 @@ function handleDigit(lastInput) {
 }
 
 
+// function to handle an operator input
+function handleOperator(lastInput) {
+    if ( firstNumber != '' && secondNumber == '') {
+        operator = lastInput;
+    }    
+
+    if (secondNumber != '') {
+        return true;
+    }
+
+    return false; 
+    
+}
+
+
 // Create a function to calculate two numbers by one operator
 function operate(firstNum, secondNum, operator) {
     switch (operator) {
