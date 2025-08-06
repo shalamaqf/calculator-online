@@ -106,7 +106,7 @@ let operator = '';
 
 
 // Create a variable to store the last character of userInput
-let lastInput = userInput[userInput.length - 1];
+let lastInput = '';
 
 
 // Create a function to check the character is digit or operator
@@ -138,7 +138,7 @@ function handleOperator(lastInput) {
     }
 
     return false; 
-    
+
 }
 
 
