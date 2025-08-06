@@ -98,6 +98,17 @@ function checkLastInput(lastInput) {
 }
 
 
+// function to handle digit input
+function handleDigit(lastInput) {
+    if (operator == '') {
+        firstNumber += lastInput;
+    }
+    else {
+        secondNumber += lastInput;
+    }
+}
+
+
 // Create a function to calculate two numbers by one operator
 function operate(firstNum, secondNum, operator) {
     switch (operator) {
