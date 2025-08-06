@@ -41,6 +41,21 @@ function displayOperator() {
 }
 
 
+// Create a function to update enable/disabled operator buttons based on firstNumber value
+function updateOperatorBtnStatus() {
+      if (firstNumber == '') {
+        operatorBtn.forEach(operator => {
+            operator.disabled = true;
+        })
+    }
+    else {
+        operatorBtn.forEach(operator => {
+            operator.disabled = false;
+        })
+    }
+}
+
+
 /*
  * Create a function to add event listeners to feature 'AC' button
  * When it clicked, it will clear the array and display text
@@ -98,7 +113,7 @@ function checkLastInput(lastInput) {
 }
 
 
-// function to handle digit input
+// function to handle a digit input
 function handleDigit(lastInput) {
     if (operator == '') {
         firstNumber += lastInput;
