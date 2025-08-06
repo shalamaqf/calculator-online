@@ -19,6 +19,7 @@ function displayDigit() {
     digitBtn.forEach(digit => {
         digit.addEventListener('pointerdown', () => {
             userInput.push(digit.textContent);
+            lastInput = userInput[userInput.length - 1];
             displayResult.textContent = userInput.join('');
             isEmpty();
         })
@@ -34,6 +35,7 @@ function displayOperator() {
     operatorBtn.forEach(operator => {
         operator.addEventListener('pointerdown', () => {
             userInput.push(operator.textContent);
+            lastInput = userInput[userInput.length - 1];
             displayResult.textContent = userInput.join('');
             isEmpty();
         })
