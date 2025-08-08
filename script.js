@@ -84,6 +84,9 @@ function updateEqualBtnStatus() {
 function allClear() {
     allClearBtn.addEventListener('pointerdown', () => {
         userInput.length = 0;
+        firstNumber = '';
+        secondNumber = '';
+        operator = '';
         displayResult.textContent = userInput.join('');
         isEmpty();
         updateOperatorBtnStatus();
