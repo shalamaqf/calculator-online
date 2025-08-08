@@ -155,10 +155,11 @@ function handleOperator(lastInput) {
  * Create a function to reset firstNumber, secondNumber, and operator
  * if the operate function triggered by an operator
 */
-function resetbyOperator(newOperator) {
+function resetByOperator(newOperator) {
     firstNumber = operate(firstNumber, secondNumber, operator).toString();
     secondNumber = '';
     operator = newOperator;
+    displayTheResult(firstNumber);
 }
 
 
@@ -171,6 +172,7 @@ function resetByEqualButton() {
     firstNumber = operate(firstNumber, secondNumber, operator).toString();
     secondNumber = '';
     operator = '';
+    displayTheResult(firstNumber);
 }
 
 
