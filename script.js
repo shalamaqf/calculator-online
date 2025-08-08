@@ -184,11 +184,22 @@ function handleOperator(lastInput) {
  * if the operate function triggered by an operator
 */
 function resetByOperator(newOperator) {
-    firstNumber = operate(firstNumber, secondNumber, operator).toString();
-    secondNumber = '';
-    operator = newOperator;
-    displayTheResult(firstNumber);
-    updateEqualBtnStatus();
+    const result = operate(firstNumber, secondNumber, operator).toString();
+    if (result !== "ERROR") {
+        firstNumber = result;
+        secondNumber = '';
+        operator = newOperator;
+        displayTheResult(result);
+        updateEqualBtnStatus();
+    }
+    else {
+        firstNumber = '';
+        secondNumber = '';
+        operator = '';
+        displayTheResult(result);
+        updateOperatorBtnStatus();
+        updateEqualBtnStatus();
+    }
 }
 
 
