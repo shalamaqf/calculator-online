@@ -181,10 +181,12 @@ function resetByOperator(newOperator) {
 */
 function resetByEqualButton() {
     triggeredByOperator = false;
-    firstNumber = operate(firstNumber, secondNumber, operator).toString();
-    secondNumber = '';
-    operator = '';
-    displayTheResult(firstNumber);
+    if (isReadyToOperate(firstNumber, secondNumber, operator)) {
+        firstNumber = operate(firstNumber, secondNumber, operator).toString();
+        secondNumber = '';
+        operator = '';
+        displayTheResult(firstNumber);
+    }
 }
 
 
