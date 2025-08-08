@@ -174,6 +174,12 @@ function resetByEqualButton() {
 }
 
 
+// Create a function to display the result
+function displayTheResult(result) {
+    displayResult.textContent = result;
+}
+
+
 /* 
  * Create a function to check if 
  * firstNumber, secondNumber, and an operator ready to be operated 
