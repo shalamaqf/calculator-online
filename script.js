@@ -143,11 +143,12 @@ function handleOperator(lastInput) {
     }    
 
     if (secondNumber != '') {
-        return true;
+        triggeredByOperator = true;
+        
+        if (isReadyToOperate(firstNumber, secondNumber, operator)) {
+            resetByOperator(lastInput);
+        }
     }
-
-    return false; 
-
 }
 
 
