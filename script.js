@@ -140,7 +140,7 @@ let triggeredByOperator = false;
 
 
 // Create a function to check the character is digit or operator
-function checkLastInput(lastInput) {
+function isDigit(lastInput) {
     return !isNaN(lastInput);
 }
 
@@ -252,10 +252,10 @@ function operate(firstNum, secondNum, operator) {
  * If conditions are met, then operate function will be executed
 */
 function handleInput(lastInput) {
-    if (checkLastInput(lastInput)) {
-        handleOperator(lastInput);
+    if (isDigit(lastInput)) {
+        handleDigit(lastInput);
     }
     else {
-        handleDigit(lastInput);
+        handleOperator(lastInput);
     }
 }
