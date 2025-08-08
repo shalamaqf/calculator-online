@@ -226,3 +226,18 @@ function operate(firstNum, secondNum, operator) {
             return Number(firstNum) /  Number(secondNum);
     }
 }
+
+
+/*
+ * Create a function to handle the user input
+ * Control firstNumber, secondNumber, and operator variable
+ * If conditions are met, then operate function will be executed
+*/
+function handleInput(lastInput) {
+    if (checkLastInput(lastInput)) {
+        handleOperator(lastInput);
+    }
+    else {
+        handleDigit(lastInput);
+    }
+}
