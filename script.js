@@ -33,16 +33,38 @@ function displayDigit() {
  * Then, the array will be displayed in the result text
 */
 function displayOperator() {
+    updateOperatorBtnStatus();
+
     operatorBtn.forEach(operator => {
         operator.addEventListener('pointerdown', () => {
+            // Prevent operator input if firstNumber is still empty
+            if (firstNumber.trim() === '') {
+                return;
+            }
+
+            // Prevent repeated operator inputs
+            if (userInput.length > 0) {
+                const lastChar = userInput[userInput.length - 1];
+                if (['+', '-', '*', '/'].includes(lastChar)) {
+                    userInput[userInput.length - 1] = operator.textContent;
+                    displayResult.textContent = userInput.join('');
+                    handleInput(operator.textContent);
+                    updateOperatorBtnStatus();
+                    return;
+                }
+            }
+
             userInput.push(operator.textContent);
             lastInput = userInput[userInput.length - 1];
             displayResult.textContent = userInput.join('');
             isEmpty();
             handleInput(lastInput);
-        })
-    })
+
+            updateOperatorBtnStatus();
+        });
+    });
 }
+
 
 
 /*
