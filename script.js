@@ -109,6 +109,27 @@ function clearEntry() {
 }
 
 
+// Create a function to update the variables by parsing the user input
+function updateVariablesFromUserInput() {
+    firstNumber = '';
+    secondNumber = '';
+    operator = '';
+    let operatorFound = false;
+
+    for (let char of userInput) {
+        if (!operatorFound && ['+', '-', '*', '/'].includes(char)) {
+            operator = char;
+            operatorFound = true;
+        } else if (!operatorFound) {
+            firstNumber += char;
+        } else {
+            secondNumber += char;
+        }
+    }
+}
+
+
+
 /*
  * Create a function to check if the user input empty or not
  * Disabled or enabled buttons based on the condition
