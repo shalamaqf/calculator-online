@@ -85,6 +85,7 @@ function allClear() {
         displayResult.textContent = userInput.join('');
         isEmpty();
         updateOperatorBtnStatus();
+        updateEqualBtnStatus();
     })
 }
 
@@ -98,6 +99,7 @@ function clearEntry() {
         displayResult.textContent = userInput.join('');
         isEmpty();
         updateOperatorBtnStatus();
+        updateEqualBtnStatus();
     })
 }
 
@@ -150,6 +152,9 @@ function handleDigit(lastInput) {
     else {
         secondNumber += lastInput;
     }
+
+    updateEqualBtnStatus();
+
 }
 
 
@@ -166,6 +171,9 @@ function handleOperator(lastInput) {
             resetByOperator(lastInput);
         }
     }
+
+    updateEqualBtnStatus();
+
 }
 
 
@@ -178,6 +186,7 @@ function resetByOperator(newOperator) {
     secondNumber = '';
     operator = newOperator;
     displayTheResult(firstNumber);
+    updateEqualBtnStatus();
 }
 
 
@@ -192,6 +201,7 @@ function resetByEqualButton() {
         secondNumber = '';
         operator = '';
         displayTheResult(firstNumber);
+        updateEqualBtnStatus();
     }
 }
 
