@@ -162,6 +162,18 @@ function resetbyOperator(newOperator) {
 }
 
 
+/*
+ * Create a function to reset firstNumber, secondNumber, and operator
+ * if the operate function triggered by the equal button
+*/
+function resetByEqualButton() {
+    triggeredByOperator = false;
+    firstNumber = operate(firstNumber, secondNumber, operator).toString();
+    secondNumber = '';
+    operator = '';
+}
+
+
 /* 
  * Create a function to check if 
  * firstNumber, secondNumber, and an operator ready to be operated 
