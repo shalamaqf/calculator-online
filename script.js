@@ -144,6 +144,21 @@ function handleOperator(lastInput) {
 }
 
 
+/* 
+ * Create a function to check if 
+ * firstNumber, secondNumber, and an operator ready to be operated 
+*/
+function isReadyToOperate(firstNumber, secondNumber, operator) {
+    if ((firstNumber != '') && (secondNumber != '') && (operator != '')) {
+        return true;
+    }
+
+    return false;
+
+}
+
+
+
 // Create a function to calculate two numbers by one operator
 function operate(firstNum, secondNum, operator) {
     switch (operator) {
