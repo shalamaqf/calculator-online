@@ -56,9 +56,10 @@ function equalButton() {
     })
 }
 
+
 // Create a function to enable/disabled operator buttons based on firstNumber value
 function updateOperatorBtnStatus() {
-      if (firstNumber == '') {
+      if (firstNumber.trim() === '') {
         operatorBtn.forEach(operator => {
             operator.disabled = true;
         })
