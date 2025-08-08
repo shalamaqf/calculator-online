@@ -151,6 +151,17 @@ function handleOperator(lastInput) {
 }
 
 
+/*
+ * Create a function to reset firstNumber, secondNumber, and operator
+ * if the operate function triggered by an operator
+*/
+function resetbyOperator(newOperator) {
+    firstNumber = operate(firstNumber, secondNumber, operator).toString();
+    secondNumber = '';
+    operator = newOperator;
+}
+
+
 /* 
  * Create a function to check if 
  * firstNumber, secondNumber, and an operator ready to be operated 
