@@ -22,6 +22,7 @@ function displayDigit() {
             lastInput = userInput[userInput.length - 1];
             displayResult.textContent = userInput.join('');
             isEmpty();
+            handleInput(lastInput);
         })
     })
 }
@@ -38,6 +39,7 @@ function displayOperator() {
             lastInput = userInput[userInput.length - 1];
             displayResult.textContent = userInput.join('');
             isEmpty();
+            handleInput(lastInput);
         })
     })
 }
