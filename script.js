@@ -43,6 +43,17 @@ function displayOperator() {
 }
 
 
+/*
+ * Create a function to add event listeners to the equal button
+ * When the equal button clicked, it will call the operate function
+ * Then, display the result
+*/
+function equalButton() {
+    equalBtn.addEventListener('pointerdown', () => {
+        resetByEqualButton();
+    })
+}
+
 // Create a function to update enable/disabled operator buttons based on firstNumber value
 function updateOperatorBtnStatus() {
       if (firstNumber == '') {
