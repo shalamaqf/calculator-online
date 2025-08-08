@@ -210,11 +210,22 @@ function resetByOperator(newOperator) {
 function resetByEqualButton() {
     triggeredByOperator = false;
     if (isReadyToOperate(firstNumber, secondNumber, operator)) {
-        firstNumber = operate(firstNumber, secondNumber, operator).toString();
-        secondNumber = '';
-        operator = '';
-        displayTheResult(firstNumber);
-        updateEqualBtnStatus();
+        const result = operate(firstNumber, secondNumber, operator).toString();
+        if (result !== "ERROR"){
+            firstNumber = result;
+            secondNumber = '';
+            operator = '';
+            displayTheResult(result);
+            updateEqualBtnStatus();
+        }
+        else {
+            firstNumber = '';
+            secondNumber = '';
+            operator = '';
+            displayTheResult(result);
+            updateOperatorBtnStatus();
+            updateEqualBtnStatus();
+        }
     }
 }
 
