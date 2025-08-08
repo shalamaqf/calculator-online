@@ -111,6 +111,13 @@ let operator = '';
 let lastInput = '';
 
 
+/*
+ * Create a boolean variable as a flag 
+ * To check if operate function triggered by an operator or the equal button
+*/
+let triggeredByOperator = false;
+
+
 // Create a function to check the character is digit or operator
 function checkLastInput(lastInput) {
     return !isNaN(lastInput);
@@ -156,7 +163,6 @@ function isReadyToOperate(firstNumber, secondNumber, operator) {
     return false;
 
 }
-
 
 
 // Create a function to calculate two numbers by one operator
