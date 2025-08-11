@@ -327,6 +327,22 @@ function disableButtons() {
 }
 
 
+// Create a function to enable buttons
+function enableButtons() {
+    operatorBtn.forEach(operator => {
+        operator.disabled = false;
+    })
+
+    digitBtn.forEach(digit => {
+        digit.disabled = false;
+    })
+
+    deleteBtn.disabled = false;
+
+    equalBtn.disabled = false;
+}
+
+
 /*
  * Create a function to handle the user input
  * Control firstNumber, secondNumber, and operator variable
