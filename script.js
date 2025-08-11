@@ -11,6 +11,7 @@ const dotBtn = document.querySelector("#dot-btn");
 // Create an array to store the user input
 let userInput = [];
 
+
 /*
  * Create a function to add event listeners to digit buttons
  * When a digit button clicked, it will stored in an input array
@@ -24,6 +25,7 @@ function displayDigit() {
             displayResult.textContent = userInput.join('');
             isEmpty();
             handleInput(lastInput);
+            updateDotBtnStatus();
         })
     })
 }
@@ -51,6 +53,7 @@ function displayOperator() {
                     displayResult.textContent = userInput.join('');
                     handleInput(operator.textContent);
                     updateOperatorBtnStatus();
+                    updateDotBtnStatus();
                     return;
                 }
             }
@@ -62,6 +65,7 @@ function displayOperator() {
             handleInput(lastInput);
 
             updateOperatorBtnStatus();
+            updateDotBtnStatus();
         });
     });
 }
@@ -116,6 +120,7 @@ function allClear() {
         isEmpty();
         updateOperatorBtnStatus();
         updateEqualBtnStatus();
+        updateDotBtnStatus();
     })
 }
 
@@ -132,6 +137,7 @@ function clearEntry() {
         updateVariablesFromUserInput();
         updateOperatorBtnStatus();
         updateEqualBtnStatus();
+        updateDotBtnStatus();
     })
 }
 
@@ -207,7 +213,7 @@ function handleDigit(lastInput) {
     }
 
     updateEqualBtnStatus();
-
+    updateDotBtnStatus();
 }
 
 
@@ -226,6 +232,7 @@ function handleOperator(lastInput) {
     }
 
     updateEqualBtnStatus();
+    updateDotBtnStatus();
 
 }
 
@@ -243,6 +250,7 @@ function resetByOperator(newOperator) {
         userInput = [result, newOperator];
         displayResult.textContent = userInput.join('')
         updateEqualBtnStatus();
+        updateDotBtnStatus();
     }
     else {
         firstNumber = '';
@@ -253,6 +261,7 @@ function resetByOperator(newOperator) {
         disableButtons();
         updateOperatorBtnStatus();
         updateEqualBtnStatus();
+        updateDotBtnStatus();
     }
 }
 
@@ -272,6 +281,7 @@ function resetByEqualButton() {
             userInput = [result];
             displayResult.textContent = userInput.join('')
             updateEqualBtnStatus();
+            updateDotBtnStatus();
         }
         else {
             firstNumber = '';
@@ -282,6 +292,7 @@ function resetByEqualButton() {
             disableButtons();
             updateOperatorBtnStatus();
             updateEqualBtnStatus();
+            updateDotBtnStatus();
         }
     }
 }
