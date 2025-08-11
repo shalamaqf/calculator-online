@@ -111,6 +111,7 @@ function allClear() {
         secondNumber = '';
         operator = '';
         displayResult.textContent = userInput.join('');
+        enableButtons();
         isEmpty();
         updateOperatorBtnStatus();
         updateEqualBtnStatus();
