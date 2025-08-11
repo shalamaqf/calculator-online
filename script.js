@@ -246,7 +246,6 @@ function resetByOperator(newOperator) {
         firstNumber = '';
         secondNumber = '';
         operator = '';
-        displayTheResult(result);
         updateOperatorBtnStatus();
         updateEqualBtnStatus();
     }
@@ -273,17 +272,10 @@ function resetByEqualButton() {
             firstNumber = '';
             secondNumber = '';
             operator = '';
-            displayTheResult(result);
             updateOperatorBtnStatus();
             updateEqualBtnStatus();
         }
     }
-}
-
-
-// Create a function to display the result
-function displayTheResult(result) {
-    displayResult.textContent = result;
 }
 
 
