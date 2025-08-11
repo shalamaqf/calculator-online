@@ -5,6 +5,7 @@ const allClearBtn = document.querySelector(".feature-btn.clear-btn");
 const deleteBtn = document.querySelector(".feature-btn.delete-btn");
 const operatorBtn = document.querySelectorAll(".operator-btn");
 const equalBtn = document.querySelector("#equal-btn");
+const dotBtn = document.querySelector("#dot-btn");
 
 
 // Create an array to store the user input
