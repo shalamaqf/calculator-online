@@ -311,6 +311,22 @@ function operate(firstNum, secondNum, operator) {
 }
 
 
+// Create a function to disable buttons except allClear button
+function disableButtons() {
+    operatorBtn.forEach(operator => {
+        operator.disabled = true;
+    })
+
+    digitBtn.forEach(digit => {
+        digit.disabled = true;
+    })
+
+    deleteBtn.disabled = true;
+
+    equalBtn.disabled = true;
+}
+
+
 /*
  * Create a function to handle the user input
  * Control firstNumber, secondNumber, and operator variable
