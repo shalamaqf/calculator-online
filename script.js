@@ -364,3 +364,27 @@ function handleInput(lastInput) {
         handleOperator(lastInput);
     }
 }
+
+
+/*
+ * Create a function to check a decimal in a number
+ * Enable and disable the dot button based on a condition
+*/
+function checkDecimal(firstNum, secondNum, operator) {
+    if (operator == '') {
+        if (firstNum.includes('.')) {
+            dotBtn.disabled = true;
+        }
+        else {
+            dotBtn.disabled = false;
+        }
+    }
+    else {
+        if (secondNum.includes('.')) {
+            dotBtn.disabled = true;
+        }
+        else {
+            dotBtn.disabled = false;
+        }
+    }
+}
