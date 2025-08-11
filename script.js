@@ -388,3 +388,9 @@ function checkDecimal(firstNum, secondNum, operator) {
         }
     }
 }
+
+
+// Create a function to update the status of the dot button
+function updateDotBtnStatus() {
+    checkDecimal(firstNumber, secondNumber, operator);
+}
