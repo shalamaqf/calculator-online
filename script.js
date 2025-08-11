@@ -246,6 +246,9 @@ function resetByOperator(newOperator) {
         firstNumber = '';
         secondNumber = '';
         operator = '';
+        displayResult.textContent = result;
+        userInput = [];
+        disableButtons();
         updateOperatorBtnStatus();
         updateEqualBtnStatus();
     }
@@ -272,6 +275,9 @@ function resetByEqualButton() {
             firstNumber = '';
             secondNumber = '';
             operator = '';
+            displayResult.textContent = result;
+            userInput = [];
+            disableButtons();
             updateOperatorBtnStatus();
             updateEqualBtnStatus();
         }
