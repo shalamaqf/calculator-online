@@ -405,3 +405,22 @@ function checkDecimal(firstNum, secondNum, operator) {
 function updateDotBtnStatus() {
     checkDecimal(firstNumber, secondNumber, operator);
 }
+
+
+/*
+ * Create a function to handle a decimal input
+ * Validate to check which number is not decimal yet
+ * Enable and disable dot button to avoid double decimal or more in a number
+ * Display the decimal number
+*/
+function handleDecimal(lastInput) {
+    if (operator == '') {
+        firstNumber += lastInput;
+    }
+    else {
+        secondNumber += lastInput;
+    }
+
+    updateEqualBtnStatus();
+    updateDotBtnStatus();
+}
