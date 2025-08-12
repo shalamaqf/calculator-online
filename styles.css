@@ -118,3 +118,9 @@ body {
     background-color: goldenrod;
     border: 1px solid #999999;
 }
+
+#dot-btn:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
