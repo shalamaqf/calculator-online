@@ -80,6 +80,24 @@ function displayOperator() {
 function equalButton() {
     equalBtn.addEventListener('pointerdown', () => {
         resetByEqualButton();
+        updateDotBtnStatus();
+    })
+}
+
+
+/*
+ * Create a function to add an event listener to the dot button
+ * When it clicked, it will functions
+ * Then, it will display the result
+*/
+function dotButton() {
+    dotBtn.addEventListener('pointerdown', () => {
+        lastInput = '.';
+        userInput.push(lastInput);
+        handleInput(lastInput);
+        displayResult.textContent = userInput.join('');
+        updateOperatorBtnStatus();
+        updateDotBtnStatus();
     })
 }
 
@@ -433,15 +451,3 @@ function handleDecimal(lastInput) {
     updateEqualBtnStatus();
     updateDotBtnStatus();
 }
-
-
-// Test the calculator
-displayDigit();
-displayOperator();
-allClear();
-clearEntry();
-equalButton();
-
-updateOperatorBtnStatus();
-updateEqualBtnStatus();
-updateDotBtnStatus();
