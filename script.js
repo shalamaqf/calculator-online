@@ -451,3 +451,20 @@ function handleDecimal(lastInput) {
     updateEqualBtnStatus();
     updateDotBtnStatus();
 }
+
+
+// Create a function to initialize all function to run the calculator
+function initCalculator() {
+    displayDigit();
+    displayOperator();
+    allClear();
+    clearEntry();
+    equalButton();
+    
+
+    updateOperatorBtnStatus();
+    updateEqualBtnStatus();
+    updateDotBtnStatus();
+}
+
+initCalculator();
