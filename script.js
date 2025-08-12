@@ -468,3 +468,55 @@ function initCalculator() {
 }
 
 initCalculator();
+
+
+/* 
+ * Add keyboard support
+ * Add event listener to the window
+ * Validate the keybind
+ * If valid, call functions
+*/
+window.addEventListener('keydown', (e) => {
+    const key = e.key;
+
+    if ('0123456789'.includes(key) || '.' === key) {
+        userInput.push(key);
+        handleInput(key);
+        displayResult.textContent = userInput.join('');
+    }
+    else if ('+-*/'.includes(key)) {
+        userInput.push(key);
+        handleInput(key);
+        displayResult.textContent = userInput.join('');
+    }
+    else if ('Enter' === key) {
+        e.preventDefault();
+        resetByEqualButton();
+    }
+    else if ('Backspace' === key) {
+        e.preventDefault();
+        userInput.pop();
+        displayResult.textContent = userInput.join('');
+        isEmpty();
+        updateVariablesFromUserInput();
+        updateOperatorBtnStatus();
+        updateEqualBtnStatus();
+        updateDotBtnStatus();
+    }
+    else if ('Escape' === (key)){
+        e.preventDefault();
+        userInput.length = 0;
+        firstNumber = '';
+        secondNumber = '';
+        operator = '';
+        displayResult.textContent = userInput.join('');
+        enableButtons();
+        isEmpty();
+        updateOperatorBtnStatus();
+        updateEqualBtnStatus();
+        updateDotBtnStatus();
+    }
+    else{
+        return;
+    }
+});
