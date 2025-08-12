@@ -198,7 +198,7 @@ let triggeredByOperator = false;
 
 // Create a function to check the character is digit or operator
 function isDigit(lastInput) {
-    return !isNaN(lastInput);
+    return '0123456789'.includes(lastInput);
 }
 
 
