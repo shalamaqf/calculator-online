@@ -202,6 +202,12 @@ function isDigit(lastInput) {
 }
 
 
+// Create a function to check the character is a dot or not
+function isDot(lastInput) {
+    return lastInput === '.';
+}
+
+
 // function to handle a digit input
 function handleDigit(lastInput) {
     if (operator == '') {
@@ -424,3 +430,15 @@ function handleDecimal(lastInput) {
     updateEqualBtnStatus();
     updateDotBtnStatus();
 }
+
+
+// Test the calculator
+displayDigit();
+displayOperator();
+allClear();
+clearEntry();
+equalButton();
+
+updateOperatorBtnStatus();
+updateEqualBtnStatus();
+updateDotBtnStatus();
