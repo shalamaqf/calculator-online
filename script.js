@@ -377,6 +377,9 @@ function handleInput(lastInput) {
     if (isDigit(lastInput)) {
         handleDigit(lastInput);
     }
+    else if (isDot(lastInput)) {
+        handleDecimal(lastInput);
+    }
     else {
         handleOperator(lastInput);
     }
