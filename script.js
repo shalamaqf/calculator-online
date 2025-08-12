@@ -338,19 +338,28 @@ function isReadyToOperate(firstNumber, secondNumber, operator) {
 
 // Create a function to calculate two numbers by one operator
 function operate(firstNum, secondNum, operator) {
+    let result;
     switch (operator) {
         case '+':
-            return Number(firstNum) + Number(secondNum);
+            result = Number(firstNum) + Number(secondNum);
+            break;
         case '-':
-            return Number(firstNum) - Number(secondNum);
+            result = Number(firstNum) - Number(secondNum);
+            break;
         case '*':
-            return Number(firstNum) * Number(secondNum);
+            result = Number(firstNum) * Number(secondNum);
+            break;
         case '/':
-            if (secondNum == 0) {
+            if (Number(secondNum) === 0) {
                 return "ERROR";                 // if divided by 0
             }
-            return Number(firstNum) /  Number(secondNum);
+            result = Number(firstNum) /  Number(secondNum);
+            break;
+        default:
+            return "ERROR";
     }
+    
+    return Number(result.toFixed(4));
 }
 
 
