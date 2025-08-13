@@ -98,7 +98,7 @@ body {
     min-height: 70px;
     justify-content: flex-start;
     gap: 2px;
-    background-color: black;
+    background-color: #E0E0E0;
 }
 
 #digit-buttons {
@@ -110,14 +110,14 @@ body {
     flex-basis: 50%;
     font-size: 20px;
     background-color: #202020;
-    border: 1px solid #999999;
+    border: 1px solid #E0E0E0;
 }
 
 #equal-btn {
     flex-basis: 40%;
     font-size: 20px;
     background-color: goldenrod;
-    border: 1px solid #999999;
+    border: 1px solid #E0E0E0;
 }
 
 #dot-btn:disabled {
