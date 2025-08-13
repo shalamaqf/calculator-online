@@ -64,7 +64,7 @@ body {
     flex-basis: 33.33%;
     font-size: 20px;
     background-color: #202020 ;
-    border: 1px solid #999999;
+    border: 1px solid #E0E0E0;
     color: gainsboro;
 }
 
@@ -88,7 +88,7 @@ body {
 
 .feature-btn, .operator-btn {
     background-color: #333333;
-    border: 1px solid #999999;
+    border: 1px solid #E0E0E0;
 }
 
 #last-buttons {
