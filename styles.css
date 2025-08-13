@@ -29,8 +29,8 @@ body {
     min-height: 80px;
     overflow-x: auto;
     white-space: nowrap;
-    border: 1px solid black;
-    background-color: #111111;
+    border: 7px solid #CCCCCC;
+    background-color: #E0E0E0;
     text-align: right;
     align-content: center;
 }
