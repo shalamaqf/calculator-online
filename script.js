@@ -507,14 +507,18 @@ window.addEventListener('keydown', (e) => {
     const key = e.key;
 
     if ('0123456789'.includes(key) || '.' === key) {
+        if (key === '.') {
+            if(!canAddDot()) return;
+        }
+
         userInput.push(key);
         handleInput(key);
         displayResult.textContent = userInput.join('');
-    }
+        updateOperatorBtnStatus();
+        updateDotBtnStatus();
+    }   
     else if ('+-*/'.includes(key)) {
-        userInput.push(key);
-        handleInput(key);
-        displayResult.textContent = userInput.join('');
+        
     }
     else if ('Enter' === key) {
         e.preventDefault();
