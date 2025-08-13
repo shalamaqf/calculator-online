@@ -535,6 +535,44 @@ window.addEventListener('keydown', (e) => {
         updateDotBtnStatus();
     }   
     else if ('+-*/'.includes(key)) {
+        if (isReadyToOperate(firstNumber, secondNumber, operator)){
+            const result = operate(firstNumber, secondNumber, operator)
+
+            if (result === "ERROR") {
+                firstNumber = '';
+                secondNumber = '';
+                operator = '';
+                 userInput = [];
+                displayResult.textContent = result;
+                disableButtons();
+                updateOperatorBtnStatus();
+                updateEqualBtnStatus();
+                updateDotBtnStatus();
+                return;
+            }
+
+            firstNumber = result;
+            secondNumber = '';
+            operator = key;
+            userInput = [result, key];
+            displayResult.textContent = userInput.join('')
+            updateEqualBtnStatus();
+            updateDotBtnStatus();
+            return;
+        }
+
+        if (canAddOperator(key)) {
+            userInput.push(key);
+            handleInput(key);
+        }
+        else {
+            userInput[userInput.length - 1] = key;
+            handleInput(key);
+        }
+
+        displayResult.textContent = userInput.join('');
+        updateOperatorBtnStatus();
+        updateDotBtnStatus();
         
     }
     else if ('Enter' === key) {
