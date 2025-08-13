@@ -497,6 +497,23 @@ function canAddDot() {
 }
 
 
+// Create a function to prevenet user from input an operator consecutively
+function canAddOperator(key) {
+    if (firstNumber.trim() === '') {
+        return false;
+    }
+
+    if (userInput.length > 0) {
+        const lastInput = userInput[userInput.length - 1];
+        if (['+', '-', '*', '/'].includes(lastInput)){
+            return false;
+        }
+    }
+
+    return true;
+}
+
+
 /* 
  * Add keyboard support
  * Add event listener to the window
