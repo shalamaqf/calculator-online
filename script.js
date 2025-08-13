@@ -479,6 +479,24 @@ function initCalculator() {
 initCalculator();
 
 
+
+// Create a function to prevent user from input a dot consecutively
+function canAddDot() {
+    if (operator === '') {
+        if (firstNumber.includes('.')) {
+            return false;
+        }
+    }
+    else {
+        if (secondNumber.includes('.')) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+
 /* 
  * Add keyboard support
  * Add event listener to the window
