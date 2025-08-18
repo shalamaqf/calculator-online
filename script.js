@@ -124,7 +124,7 @@ function dotButton() {
 
 // Create a function to enable/disabled operator buttons based on firstNumber value
 function updateOperatorBtnStatus() {
-      if (firstNumber.trim() === '') {
+      if (String(firstNumber).trim() === '') {
         operatorBtn.forEach(operator => {
             operator.disabled = true;
         })
@@ -524,7 +524,7 @@ function canAddDot() {
 
 // Create a function to prevenet user from input an operator consecutively
 function canAddOperator(key) {
-    if (firstNumber.trim() === '') {
+    if (String(firstNumber).trim() === '') {
         return false;
     }
 
@@ -569,7 +569,17 @@ window.addEventListener('keydown', (e) => {
         updateDotBtnStatus();
     }   
     else if ('+-*/'.includes(key)) {
-        justCalculated = false;
+        if (justCalculated || triggeredByOperator) {
+            operator = key;
+            userInput = [firstNumber, key];
+            displayResult.textContent = userInput.join('');
+            justCalculated = false;
+            triggeredByOperator = false;
+            updateEqualBtnStatus();
+            updateDotBtnStatus();
+            updateOperatorBtnStatus();
+            return;
+        }
         
         if (isReadyToOperate(firstNumber, secondNumber, operator)){
             const result = operate(firstNumber, secondNumber, operator)
@@ -578,7 +588,7 @@ window.addEventListener('keydown', (e) => {
                 firstNumber = '';
                 secondNumber = '';
                 operator = '';
-                 userInput = [];
+                userInput = [];
                 displayResult.textContent = result;
                 disableButtons();
                 updateOperatorBtnStatus();
