@@ -20,6 +20,15 @@ let userInput = [];
 function displayDigit() {
     digitBtn.forEach(digit => {
         digit.addEventListener('pointerdown', () => {
+            if (justCalculated) {
+                // start a new calculation
+                firstNumber = '';
+                secondNumber = '';
+                operator = '';
+                userInput = [];
+                justCalculated = false;
+            }
+
             userInput.push(digit.textContent);
             lastInput = userInput[userInput.length - 1];
             displayResult.textContent = userInput.join('');
@@ -40,6 +49,8 @@ function displayOperator() {
 
     operatorBtn.forEach(operator => {
         operator.addEventListener('pointerdown', () => {
+            justCalculated = false;
+
             // Prevent operator input if firstNumber is still empty
             if (firstNumber.trim() === '') {
                 return;
@@ -92,6 +103,15 @@ function equalButton() {
 */
 function dotButton() {
     dotBtn.addEventListener('pointerdown', () => {
+        if (justCalculated) {
+                // start a new calculation
+                firstNumber = '';
+                secondNumber = '';
+                operator = '';
+                userInput = [];
+                justCalculated = false;
+        }
+        
         lastInput = '.';
         userInput.push(lastInput);
         handleInput(lastInput);
@@ -207,6 +227,10 @@ let operator = '';
 let lastInput = '';
 
 
+// Create a flag to indicate a calculation
+let justCalculated = false;
+
+
 /*
  * Create a boolean variable as a flag 
  * To check if operate function triggered by an operator or the equal button
@@ -303,7 +327,8 @@ function resetByEqualButton() {
             secondNumber = '';
             operator = '';
             userInput = [result];
-            displayResult.textContent = userInput.join('')
+            displayResult.textContent = userInput.join('');
+            justCalculated = true;
             updateEqualBtnStatus();
             updateDotBtnStatus();
         }
@@ -524,6 +549,15 @@ window.addEventListener('keydown', (e) => {
     const key = e.key;
 
     if ('0123456789'.includes(key) || '.' === key) {
+            if (justCalculated) {
+                // start a new calculation
+                firstNumber = '';
+                secondNumber = '';
+                operator = '';
+                userInput = [];
+                justCalculated = false;
+            }
+
         if (key === '.') {
             if(!canAddDot()) return;
         }
@@ -535,6 +569,8 @@ window.addEventListener('keydown', (e) => {
         updateDotBtnStatus();
     }   
     else if ('+-*/'.includes(key)) {
+        justCalculated = false;
+        
         if (isReadyToOperate(firstNumber, secondNumber, operator)){
             const result = operate(firstNumber, secondNumber, operator)
 
